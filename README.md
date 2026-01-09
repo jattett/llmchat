@@ -7,7 +7,7 @@ M1 Pro MacBook (32GB)에서 실행 가능한 오픈소스 LLM 모델을 사용�
 ## 🚀 기능
 
 - **백엔드**: FastAPI 기반 LLM 서버
-- **프론트엔드**: React 기반 채팅 인터페이스
+- **프론트엔드**: Next.js 14 + TypeScript 기반 채팅 인터페이스
 - **모델 지원**: llama-cpp-python을 통한 GGUF 형식 모델 지원
 - **M1 Pro 최적화**: Metal GPU 가속 지원
 
@@ -50,7 +50,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 서버는 `http://localhost:8000`에서 실행됩니다.
 
-### 2. 프론트엔드 설정
+### 2. 프론트엔드 설정 (Next.js + TypeScript)
 
 ```bash
 # 새 터미널에서 프론트엔드 디렉토리로 이동
@@ -60,7 +60,7 @@ cd frontend
 npm install
 
 # 개발 서버 실행
-npm start
+npm run dev
 ```
 
 프론트엔드는 `http://localhost:3000`에서 실행됩니다.
@@ -93,10 +93,10 @@ PORT=8000
 
 ### 프론트엔드 설정
 
-`.env` 파일을 생성하여 API URL을 설정할 수 있습니다:
+`.env.local` 파일을 생성하여 API URL을 설정할 수 있습니다:
 
 ```env
-REACT_APP_API_URL=http://localhost:8000
+NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
 ## 📡 API 엔드포인트
@@ -163,5 +163,6 @@ REACT_APP_API_URL=http://localhost:8000
 - [llama.cpp](https://github.com/ggerganov/llama.cpp)
 - [llama-cpp-python](https://github.com/abetlen/llama-cpp-python)
 - [FastAPI](https://fastapi.tiangolo.com/)
-- [React](https://react.dev/)
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 # llmchat
