@@ -28,9 +28,11 @@ frontend/.env.test.local
 frontend/.env.production.local
 
 # Models
-models/*.gguf
-models/*.bin
-models/*.safetensors
+models/
+backend/models/
+*.gguf
+*.bin
+*.safetensors
 
 # Environment
 .env
